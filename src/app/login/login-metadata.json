@@ -1,0 +1,32 @@
+{
+  "isReadOnly": false,
+  "commitMode": "immediate",
+  "validationMode": "immediate",
+  "propertyAnnotations":
+  [
+    {
+      "name": "password",
+      "index": 1,
+      "editor": "Password",
+      "validators": [{
+        "name": "MinimumLength",
+        "params": {
+          "length": 6
+        }
+      }]
+    },
+    {
+      "name": "email",
+      "displayName": "E-Mail",
+      "index": 0,
+      "editor": "Email",
+      "validators": [{
+        "name": "RegEx",
+        "params": {
+          "regEx": "^[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}\\@telerik.com$",
+          "errorMessage": "Please provide your @telerik.com email."
+        }
+      }]
+    }
+  ]
+}

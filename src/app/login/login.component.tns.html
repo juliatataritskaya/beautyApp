@@ -1,0 +1,22 @@
+<ActionBar title="Login" class="action-bar">
+</ActionBar>
+
+<GridLayout class="layout">
+  <StackLayout background="white" class="login-form">
+    <RadDataForm #loginFormComp [source]="loginData">
+
+      <TKEntityProperty tkDataFormProperty name="email"
+                        displayName="Email" hintText="Enter email ..." index="0">
+        <TKPropertyEditor tkEntityPropertyEditor type="Text"></TKPropertyEditor>
+        <TKEmailValidator tkEntityPropertyValidators></TKEmailValidator>
+      </TKEntityProperty>
+
+      <TKEntityProperty tkDataFormProperty name="password"
+                        displayName="Password" hintText="Enter password ..." index="1">
+        <TKPropertyEditor tkEntityPropertyEditor type="Password"></TKPropertyEditor>
+        <TKMinimumLengthValidator tkEntityPropertyValidators length="6"></TKMinimumLengthValidator>
+      </TKEntityProperty>
+    </RadDataForm>
+    <Button text="Login" (tap)="onLogin(loginData)"></Button>
+  </StackLayout>
+</GridLayout>

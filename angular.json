@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "first-angular-nativescript-project"
+  "defaultProject": "BeautyApp",
+  "cli": {
+    "defaultCollection": "@nativescript/schematics"
+  }
 }
