@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { HairComponent } from './hair/hair.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     HomeComponent,
     SidebarComponent,
     ProfileComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    HairComponent
   ],
   imports: [
     NativeScriptModule,

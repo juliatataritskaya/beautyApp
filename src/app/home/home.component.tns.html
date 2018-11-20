@@ -1,8 +1,21 @@
 <ActionBar title="Home" class="action-bar">
 </ActionBar>
-<GridLayout class="layout">
-  <app-sidebar></app-sidebar>
-  <StackLayout class="category-wrapper">
-    <Label text="Home" color="white"></Label>
-  </StackLayout>
-</GridLayout>
+  <GridLayout columns="*, *, *, *, *, *" rows="*, *, *, *" class="layout">
+    <StackLayout col="1" row="1" colSpan="4" rowSpan="2">
+      <GridLayout columns="*, *" rows="*, *">
+        <StackLayout col="0" row="0" class="category nails view-nails">
+          <Label text="Nails"></Label>
+        </StackLayout>
+        <StackLayout col="0" row="1" class="category hair view-hair" >
+          <Label text="Hair"></Label>
+        </StackLayout>
+        <StackLayout col="1" row="0" class="category makeup view-makeup">
+          <Label text="Makeup"></Label>
+        </StackLayout>
+        <StackLayout col="1" row="1" class="category massage view-massage">
+          <Label text="Massage"></Label>
+        </StackLayout>
+      </GridLayout>
+    </StackLayout>
+  </GridLayout>
+<app-sidebar></app-sidebar>

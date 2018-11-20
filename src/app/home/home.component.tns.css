@@ -1,4 +1,67 @@
-.category-wrapper {
-  vertical-align: center;
+.category {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 7;
+  border-color: rgba(250, 241, 241, 0.45);
+  border-width: 5;
+}
+
+.category > Label {
+  color: white;
+  font-size: 24;
+  font-weight: bold;
   text-align: center;
+}
+
+.nails {
+  background-image: url("~/assets/img/nails.jpg");
+}
+
+.hair {
+  background-image: url("~/assets/img/hair.png");
+}
+
+.makeup {
+  background-image: url("~/assets/img/makeup.jpg");
+}
+
+.massage {
+  background-image: url("~/assets/img/massage.jpg");
+}
+
+.view-nails {
+  animation-name: translateNails;
+  animation-duration: 2;
+}
+@keyframes translateNails {
+  from { transform: translate(-300, 0); }
+  to { transform: translate(0, 0); }
+}
+
+.view-makeup {
+  animation-name: translateMakeup;
+  animation-duration: 2;
+}
+@keyframes translateMakeup {
+  from { transform: translate(0, -300); }
+  to { transform: translate(0, 0); }
+}
+
+.view-hair {
+  animation-name: translateHair;
+  animation-duration: 2;
+}
+@keyframes translateHair {
+  from { transform: translate(0, 300); }
+  to { transform: translate(0, 0); }
+}
+
+.view-massage {
+  animation-name: translateMassage;
+  animation-duration: 2;
+}
+@keyframes translateMassage {
+  from { transform: translate(300, 0); }
+  to { transform: translate(0, 0); }
 }
