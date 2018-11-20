@@ -1,0 +1,21 @@
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+  <StackLayout tkDrawerContent class="sideStackLayout">
+    <StackLayout class="sideTitleStackLayout">
+      <Label text="Menu"></Label>
+    </StackLayout>
+    <StackLayout class="sideStackLayout">
+      <Label text="Home" class="sideLabel " [nsRouterLink]="['/home']"
+             [nsRouterLinkActive]="['sideLightGrayLabel']"></Label>
+      <Label text="Profile" class="sideLabel" [nsRouterLink]="['/profile']"
+             [nsRouterLinkActive]="['sideLightGrayLabel']"></Label>
+      <Label text="Favorite" class="sideLabel" [nsRouterLink]="['/favorite']"
+             [nsRouterLinkActive]="['sideLightGrayLabel']"></Label>
+      <Label text="Logout" class="sideLabel" [nsRouterLink]="['/login']"
+             [nsRouterLinkActive]="['sideLightGrayLabel']"></Label>
+    </StackLayout>
+    <Label text="Close Menu" color="lightgray" padding="10" style="horizontal-align: center" (tap)="onCloseDrawerTap()"></Label>
+  </StackLayout>
+  <StackLayout tkMainContent class="pull-right">
+    <Button text="{{hamburger}}" (tap)="openDrawer()" class="drawerContentButton"></Button>
+  </StackLayout>
+</RadSideDrawer>

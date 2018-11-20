@@ -8,6 +8,7 @@
       "name": "password",
       "index": 1,
       "editor": "Password",
+      "hintText": "Enter password ...",
       "validators": [{
         "name": "MinimumLength",
         "params": {
@@ -17,14 +18,14 @@
     },
     {
       "name": "email",
-      "displayName": "E-Mail",
+      "displayName": "Email",
       "index": 0,
       "editor": "Email",
+      "hintText": "Enter email ...",
       "validators": [{
-        "name": "RegEx",
-        "params": {
-          "regEx": "^[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}\\@telerik.com$",
-          "errorMessage": "Please provide your @telerik.com email."
+        "name": "Email",
+          "params": {
+          "errorMessage": "Please provide your email."
         }
       }]
     }

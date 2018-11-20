@@ -4,7 +4,7 @@ import { NativeScriptRouterModule } from 'nativescript-angular/router';
 import { AppRoutingModule } from './app-routing.module.tns';
 import { AppComponent } from './app.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import {NativeScriptCommonModule} from 'nativescript-angular/common';
+import { NativeScriptCommonModule } from 'nativescript-angular/common';
 import { NativeScriptUISideDrawerModule } from 'nativescript-ui-sidedrawer/angular';
 import { NativeScriptUIListViewModule } from 'nativescript-ui-listview/angular';
 import { NativeScriptUICalendarModule } from 'nativescript-ui-calendar/angular';
@@ -14,13 +14,20 @@ import { NativeScriptUIAutoCompleteTextViewModule } from 'nativescript-ui-autoco
 import { NativeScriptUIGaugeModule } from 'nativescript-ui-gauge/angular';
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 import { LoginComponent } from './login/login.component';
-import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ProfileComponent } from './profile/profile.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
     LoginComponent,
+    HomeComponent,
+    SidebarComponent,
+    ProfileComponent,
+    FavoriteComponent
   ],
   imports: [
     NativeScriptModule,
@@ -36,6 +43,7 @@ import { Router, NavigationStart, NavigationEnd } from '@angular/router';
     NativeScriptFormsModule,
     NativeScriptRouterModule
   ],
+  exports: [SidebarComponent],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
