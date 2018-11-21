@@ -18,7 +18,13 @@ import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FavoriteComponent } from './favorite/favorite.component';
-import { HairComponent } from './hair/hair.component';
+import { HairComponent } from './category/hair/hair.component';
+import { CategoryComponent } from './category/category.component';
+import { ListCategoryComponent } from './category/list/list-category.component';
+import { NailsComponent } from './category/nails/nails.component';
+import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
+import { ServicesModule } from './services/services.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,11 +35,17 @@ import { HairComponent } from './hair/hair.component';
     SidebarComponent,
     ProfileComponent,
     FavoriteComponent,
-    HairComponent
+    HairComponent,
+    NailsComponent,
+    CategoryComponent,
+    ListCategoryComponent
   ],
   imports: [
     NativeScriptModule,
     AppRoutingModule,
+    ServicesModule,
+    HttpClientModule,
+    NativeScriptHttpClientModule,
     NativeScriptUISideDrawerModule,
     NativeScriptUIListViewModule,
     NativeScriptUICalendarModule,

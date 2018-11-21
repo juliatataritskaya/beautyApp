@@ -1,19 +1,19 @@
 <ActionBar title="Home" class="action-bar">
 </ActionBar>
-  <GridLayout columns="*, *, *, *, *, *" rows="*, *, *, *" class="layout">
-    <StackLayout col="1" row="1" colSpan="4" rowSpan="2">
+  <GridLayout columns="*, *, *, *, *, *, *, *, *, *" rows="*, *, *, *" class="layout">
+    <StackLayout col="1" row="1" colSpan="8" rowSpan="2">
       <GridLayout columns="*, *" rows="*, *">
-        <StackLayout col="0" row="0" class="category nails view-nails">
+        <StackLayout col="0" row="0" class="category nails view-nails" [nsRouterLink]="['/category/nails']">
           <Label text="Nails"></Label>
         </StackLayout>
-        <StackLayout col="0" row="1" class="category hair view-hair" >
+        <StackLayout col="0" row="1" class="category hair view-hair" [nsRouterLink]="['/category/hair']">
           <Label text="Hair"></Label>
         </StackLayout>
-        <StackLayout col="1" row="0" class="category makeup view-makeup">
+        <StackLayout col="1" row="0" class="category makeup view-makeup" [nsRouterLink]="['/category/makeup']">
           <Label text="Makeup"></Label>
         </StackLayout>
-        <StackLayout col="1" row="1" class="category massage view-massage">
-          <Label text="Massage"></Label>
+        <StackLayout col="1" row="1" class="category massage view-massage" [nsRouterLink]="['/category/list']">
+          <Label text="More..."></Label>
         </StackLayout>
       </GridLayout>
     </StackLayout>

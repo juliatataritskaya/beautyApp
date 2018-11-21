@@ -1,0 +1,17 @@
+<ActionBar title="Category" class="action-bar">
+</ActionBar>
+<app-sidebar></app-sidebar>
+
+<GridLayout columns="*" rows="*, *, *, *, *, *, *, *" class="layout">
+    <StackLayout row="1" col="0" rowSpan="6">
+      <ListView class="list-group" padding="10" [items]="categories" (itemTap)="console.log(category.id)">
+        <ng-template let-category="item">
+          <FlexboxLayout flexDirection="row" class="list-group-item">
+            <Image [src]="category.imageSrc" class="thumb img-circle"></Image>
+            <Label [text]="category.name" class="list-group-item-heading"
+                   verticalAlignment="center" style="width: 50%"></Label>
+          </FlexboxLayout>
+        </ng-template>
+      </ListView>
+    </StackLayout>
+</GridLayout>

@@ -7,12 +7,15 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FavoriteComponent } from './favorite/favorite.component';
-import { HairComponent } from './hair/hair.component';
+import { HairComponent } from './category/hair/hair.component';
+import { CategoryComponent } from './category/category.component';
+import { ListCategoryComponent } from './category/list/list-category.component';
+import {NailsComponent} from './category/nails/nails.component';
 
 export const routes: Routes = [
   {
       path: '',
-      redirectTo: '/main-page',
+      redirectTo: 'main-page',
       pathMatch: 'full',
   },
   {
@@ -25,12 +28,7 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent, children: [
-      {
-        path: 'hair',
-        component: HairComponent,
-      }
-    ],
+    component: HomeComponent
   },
   {
     path: 'profile',
@@ -40,6 +38,23 @@ export const routes: Routes = [
     path: 'favorite',
     component: FavoriteComponent,
   },
+  {
+    path: 'category',
+    component: CategoryComponent, children: [
+      {
+        path: 'list',
+        component: ListCategoryComponent,
+      },
+      {
+        path: 'hair',
+        component: HairComponent,
+      },
+      {
+        path: 'nails',
+        component: NailsComponent,
+      }
+    ]
+  }
 
 ];
 
